@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,7 +18,7 @@ public class GrantClass
         connect = new SqlConnection(connectString);
     }
 
-    public DataTable GetGrants(int GrantRequestKey)
+    public DataTable GetGrants(int GrantTypeKey)
     {
         DataTable table = new DataTable();
         //this query was given
@@ -32,7 +32,8 @@ public class GrantClass
  + " Where GrantTypeKey = @GrantTypeKey";
         SqlCommand cmd = new SqlCommand(sql, connect);
         //not sure what to put here probably wrong
-        cmd.Parameters.AddWithValue("@grantRequest", GrantRequestKey);
+        
+        cmd.Parameters.AddWithValue("@GrantTypeKey", GrantTypeKey);
         SqlDataReader reader = null;
         connect.Open();
         reader = cmd.ExecuteReader();
@@ -57,5 +58,5 @@ public class GrantClass
         return table;
     }
 
-　
+
 }

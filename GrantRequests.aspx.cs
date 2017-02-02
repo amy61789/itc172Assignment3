@@ -17,7 +17,6 @@ public partial class GrantRequests : System.Web.UI.Page
             {
                 DataTable table = grant.GetGrantType();
                 DropDownList1.DataSource = table;
-                DropDownList1.DataTextField = "GrantTypeName";
                 DropDownList1.DataTextField = "GrantTypeKey";
                 DropDownList1.DataBind();
                 ListItem item = new ListItem("Choose a Grant");

@@ -9,9 +9,18 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    <h1>Grant Requests</h1>
+    <h1 style="color:cornflowerblue;" "font-family:verdana;">Grant Requests</h1>
         <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"></asp:DropDownList>
-        <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+        <asp:GridView ID="GridView1" runat="server" GridLines="both">
+            <rowstyle backcolor="LightCyan"  
+           forecolor="DarkBlue"
+           font-italic="true"/>
+
+            <alternatingrowstyle backcolor="PaleTurquoise"  
+          forecolor="DarkBlue"
+          font-italic="true"/>
+
+        </asp:GridView>
     </div>
     </form>
 </body>

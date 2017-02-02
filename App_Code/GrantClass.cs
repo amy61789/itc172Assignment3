@@ -31,8 +31,6 @@ public class GrantClass
  + "on r.GrantRequestKey = gr.GrantRequestKey "
  + " Where GrantTypeKey = @GrantTypeKey";
         SqlCommand cmd = new SqlCommand(sql, connect);
-        //not sure what to put here probably wrong
-        
         cmd.Parameters.AddWithValue("@GrantTypeKey", GrantTypeKey);
         SqlDataReader reader = null;
         connect.Open();

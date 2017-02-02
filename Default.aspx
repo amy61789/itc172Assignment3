@@ -14,7 +14,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <h1>Classic ADO</h1>
+        <h1 style="color:cornflowerblue;" "font-family:verdana;">Classic ADO</h1>
         <table>
             <tr>
                 <td class="auto-style1">Email: </td>

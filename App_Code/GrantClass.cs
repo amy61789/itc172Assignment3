@@ -21,7 +21,6 @@ public class GrantClass
     public DataTable GetGrants(int GrantTypeKey)
     {
         DataTable table = new DataTable();
-        //this query was given
         string sql = "Select GrantReviewDate as [Date], "
  + "GrantRequestExplanation as Explanation, "
  + "GrantAllocationAmount as Amount, "
@@ -43,7 +42,6 @@ public class GrantClass
 
     public DataTable GetGrantType()
     {
-        //i have no clue what's going on anymore
         DataTable table = new DataTable();
         string sql = "Select GrantTypeKey, GrantTypeName from GrantType";
         SqlCommand cmd = new SqlCommand(sql, connect);
